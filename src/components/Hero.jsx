@@ -13,7 +13,7 @@ export default function Hero() {
         <div aria-hidden className="absolute bottom-14 left-0 right-0 marquee">
           <div className="marquee-track gap-3 px-6">
             {Array.from({ length: 24 }).map((_, i) => (
-              <span key={i} className="code-pill">const fn = (x) =&gt; x ** 2; • await fetch('/api'); • map(({ id }) =&gt; id)</span>
+              <span key={i} className="code-pill">{"const fn = (x) => x ** 2; • await fetch('/api'); • map(({ id }) => id)"}</span>
             ))}
           </div>
         </div>
