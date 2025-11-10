@@ -72,13 +72,13 @@ function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-premium text-slate-100">
       <Navbar />
       <main className="pt-16">
         <Hero />
 
         <Section id="about" title="About Me" subtitle="A brief snapshot of who I am and what I love to build.">
-          <div className="prose max-w-none text-gray-700">
+          <div className="prose prose-invert max-w-none">
             <p>
               I’m Nilanjan, a Computer Science student with a passion for building clean, user-focused digital products. I code in Python, Java, C, and JavaScript, and I’m comfortable across HTML/CSS for front-end development. My interests include data structures, algorithms, generative AI, and data visualization.
             </p>
@@ -119,31 +119,31 @@ function App() {
 
         <Section id="contact" title="Contact & Socials" subtitle="Let’s collaborate or chat about opportunities.">
           <div className="grid md:grid-cols-2 gap-8">
-            <form className="bg-white rounded-xl border border-black/5 p-6 shadow-sm">
+            <form className="card-glass rounded-xl p-6">
               <div className="grid grid-cols-1 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700">Name</label>
-                  <input className="mt-1 w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500" placeholder="Your name" />
+                  <label className="block text-sm font-medium text-slate-200">Name</label>
+                  <input className="mt-1 w-full rounded-md bg-white/5 border border-white/10 text-white placeholder-slate-400 focus:border-indigo-400 focus:ring-indigo-400" placeholder="Your name" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700">Email</label>
-                  <input type="email" className="mt-1 w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500" placeholder="you@example.com" />
+                  <label className="block text-sm font-medium text-slate-200">Email</label>
+                  <input type="email" className="mt-1 w-full rounded-md bg-white/5 border border-white/10 text-white placeholder-slate-400 focus:border-indigo-400 focus:ring-indigo-400" placeholder="you@example.com" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700">Message</label>
-                  <textarea rows={4} className="mt-1 w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500" placeholder="Tell me about your project" />
+                  <label className="block text-sm font-medium text-slate-200">Message</label>
+                  <textarea rows={4} className="mt-1 w-full rounded-md bg-white/5 border border-white/10 text-white placeholder-slate-400 focus:border-indigo-400 focus:ring-indigo-400" placeholder="Tell me about your project" />
                 </div>
-                <button type="button" onClick={()=>alert('Thanks! I will get back to you soon.')} className="inline-flex items-center justify-center rounded-md bg-blue-600 text-white text-sm font-medium px-4 py-2 shadow hover:bg-blue-700">Send Message</button>
+                <button type="button" onClick={()=>alert('Thanks! I will get back to you soon.')} className="btn-primary">Send Message</button>
               </div>
             </form>
 
             <div className="flex flex-col gap-4">
-              <div className="p-6 rounded-xl border border-black/5 bg-gradient-to-br from-blue-50 to-violet-50">
-                <h3 className="font-semibold">Connect</h3>
-                <p className="mt-2 text-gray-700">I’m open to internships, freelance work, and collaborations in web development, data visualization, and AI.</p>
-                <a href="https://www.linkedin.com/in/nilanjan-nayak-73b475322" target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center rounded-md bg-gray-900 text-white text-sm font-medium px-4 py-2 w-fit">LinkedIn Profile</a>
+              <div className="card-glass p-6 rounded-xl">
+                <h3 className="font-semibold text-slate-100">Connect</h3>
+                <p className="mt-2 text-slate-300">I’m open to internships, freelance work, and collaborations in web development, data visualization, and AI.</p>
+                <a href="https://www.linkedin.com/in/nilanjan-nayak-73b475322" target="_blank" rel="noreferrer" className="btn-secondary w-fit mt-3">LinkedIn Profile</a>
               </div>
-              <footer className="text-sm text-gray-500">© {new Date().getFullYear()} Nilanjan Nayak — Crafted with React and love.</footer>
+              <footer className="text-sm text-slate-400">© {new Date().getFullYear()} Nilanjan Nayak — Crafted with React.</footer>
             </div>
           </div>
         </Section>

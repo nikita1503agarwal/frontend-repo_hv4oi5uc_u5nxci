@@ -22,18 +22,21 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-white/70 backdrop-blur border-b border-black/5">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/30 backdrop-blur-xl">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-blue-600 to-violet-600" />
-          <span className="font-semibold tracking-tight">Nilanjan Nayak</span>
+          <div className="h-8 w-8 rounded-lg" style={{
+            background: "conic-gradient(from 180deg at 50% 50%, #6366f1, #8b5cf6, #d946ef, #22d3ee, #6366f1)",
+            filter: "drop-shadow(0 0 12px rgba(99,102,241,0.45))"
+          }} />
+          <span className="font-semibold tracking-tight title-gradient">Nilanjan Nayak</span>
         </div>
         <nav className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
             <button
               key={item.id}
               onClick={() => handleNav(item.id)}
-              className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+              className="text-sm text-slate-300 hover:text-white transition-colors"
             >
               {item.label}
             </button>
@@ -42,34 +45,34 @@ export default function Navbar() {
             href="https://www.linkedin.com/in/nilanjan-nayak-73b475322"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900"
+            className="inline-flex items-center gap-2 text-sm text-slate-300 hover:text-white"
           >
             <Linkedin size={18} /> LinkedIn
           </a>
           <a
             href="#"
             onClick={(e)=>{e.preventDefault();}}
-            className="inline-flex items-center gap-2 rounded-md bg-blue-600 text-white text-sm font-medium px-3 py-2 shadow hover:bg-blue-700"
+            className="btn-primary"
           >
-            <Download size={16} /> Resume
+            <Download size={16} className="mr-2" /> Resume
           </a>
         </nav>
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden p-2 rounded-md hover:bg-gray-100"
+          className="md:hidden p-2 rounded-md bg-white/5 border border-white/10 text-white"
           aria-label="Toggle menu"
         >
           {open ? <X /> : <Menu />}
         </button>
       </div>
       {open && (
-        <div className="md:hidden border-t border-black/5 bg-white/90 backdrop-blur">
+        <div className="md:hidden border-t border-white/10 bg-black/70 backdrop-blur-xl">
           <div className="px-4 py-3 flex flex-col gap-2">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => handleNav(item.id)}
-                className="text-left py-2 text-gray-700 hover:text-gray-900"
+                className="text-left py-2 text-slate-200 hover:text-white"
               >
                 {item.label}
               </button>
@@ -78,14 +81,14 @@ export default function Navbar() {
               href="https://www.linkedin.com/in/nilanjan-nayak-73b475322"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 py-2 text-gray-700 hover:text-gray-900"
+              className="inline-flex items-center gap-2 py-2 text-slate-200 hover:text-white"
             >
               <Linkedin size={18} /> LinkedIn
             </a>
             <a
               href="#"
               onClick={(e)=>{e.preventDefault();}}
-              className="inline-flex items-center gap-2 py-2 text-gray-700 hover:text-gray-900"
+              className="inline-flex items-center gap-2 py-2 text-slate-200 hover:text-white"
             >
               <Download size={16} /> Resume
             </a>

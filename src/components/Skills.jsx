@@ -17,18 +17,22 @@ export default function Skills() {
   return (
     <div className="grid md:grid-cols-2 gap-6">
       {skills.map((s) => (
-        <div key={s.name} className="bg-white rounded-lg border border-black/5 p-4 shadow-sm">
+        <div key={s.name} className="card-glass rounded-xl p-4 hover-glow">
           <div className="flex items-center justify-between mb-2">
-            <span className="font-medium text-gray-800">{s.name}</span>
-            <span className="text-sm text-gray-500">{s.level}%</span>
+            <span className="font-medium text-slate-100">{s.name}</span>
+            <span className="text-sm text-slate-300">{s.level}%</span>
           </div>
-          <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+          <div className="h-2 bg-white/10 rounded-full overflow-hidden">
             <motion.div
               initial={{ width: 0 }}
               whileInView={{ width: `${s.level}%` }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="h-full bg-gradient-to-r from-blue-600 to-violet-600"
+              className="h-full"
+              style={{
+                backgroundImage: 'linear-gradient(90deg, #6366f1, #8b5cf6, #d946ef)',
+                boxShadow: '0 0 16px rgba(139,92,246,0.45)'
+              }}
             />
           </div>
         </div>

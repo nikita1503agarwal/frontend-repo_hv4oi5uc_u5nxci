@@ -19,6 +19,11 @@
 
   body {
     @apply antialiased;
+    /* Premium glossy background */
+    background: radial-gradient(1200px 600px at 20% 0%, rgba(99,102,241,0.25), transparent 60%),
+                radial-gradient(900px 500px at 80% 10%, rgba(168,85,247,0.25), transparent 60%),
+                linear-gradient(180deg, #0a0b0f 0%, #0b0d14 35%, #0c0f18 100%);
+    color-scheme: dark;
   }
 }
 
@@ -42,5 +47,44 @@
     --tw-exit-rotate: initial;
     --tw-exit-translate-x: initial;
     --tw-exit-translate-y: initial;
+  }
+
+  /* Premium theme helpers */
+  .bg-premium {
+    background: radial-gradient(1200px 600px at 20% 0%, rgba(99,102,241,0.25), transparent 60%),
+                radial-gradient(900px 500px at 80% 10%, rgba(168,85,247,0.25), transparent 60%),
+                linear-gradient(180deg, #0a0b0f 0%, #0b0d14 35%, #0c0f18 100%);
+  }
+
+  .card-glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/10 shadow-lg shadow-black/30;
+  }
+
+  .hover-glow {
+    transition: box-shadow 200ms ease;
+  }
+  .hover-glow:hover {
+    box-shadow: 0 8px 30px rgba(99,102,241,0.25), 0 2px 8px rgba(0,0,0,0.5);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center rounded-md text-white text-sm font-medium px-4 py-2 shadow;
+    background-image: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+  }
+  .btn-primary:hover { filter: brightness(1.05); }
+
+  .btn-secondary {
+    @apply inline-flex items-center rounded-md bg-white/10 text-white text-sm font-medium px-4 py-2 shadow border border-white/10 backdrop-blur;
+  }
+
+  .tag-chip {
+    @apply text-xs px-2 py-1 rounded-full bg-white/10 text-slate-200 border border-white/10;
+  }
+
+  .title-gradient {
+    background: linear-gradient(90deg, #e5e7eb 0%, #c7d2fe 40%, #e9d5ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 }
